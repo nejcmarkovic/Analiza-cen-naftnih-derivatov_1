@@ -18,7 +18,7 @@ if __name__=="__main__":
     cene = pd.read_csv("data/processed/cene.csv", parse_dates=["datum"])
 
     korelacija1 = korelacija(cene, "bencin_95", "brent")
-    print("Korelacija med ceno bencina in Brent nafto:", round(korelacija, 3))
+    print("Korelacija med ceno bencina in Brent nafto:", round(korelacija1, 3))
 
     cene = drsece_povprecje(cene, "bencin_95", okno=30)
     print(cene.tail())
